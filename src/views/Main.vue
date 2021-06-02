@@ -1,13 +1,11 @@
 <template>
   <div class="main">
-    working!
+    content goes here!
   </div>
 </template>
 
 <script>
-
 export default {
-  components: {
-  },
+  components: {},
 };
 </script>

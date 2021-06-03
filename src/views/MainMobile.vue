@@ -1,12 +1,11 @@
 <template>
-  <div class="main">
-    I am Main!
+  <div class="main-mobile">
+    I am MainMobile!
     <b-container class="grid-container">
       <b-row>
-        <b-col>notes</b-col>
-        <b-col>1 of 3</b-col>
-        <b-col>2 of 3</b-col>
-        <b-col>3 of 3</b-col>
+        <b-col sm="auto">1 of 2</b-col>
+        <b-col sm="auto">2 of 2</b-col>
+        <b-col sm="auto">notes</b-col>
       </b-row>
     </b-container>
     <b-button v-b-toggle.sidebar-1>Toggle Sidebar</b-button>
@@ -15,7 +14,7 @@
 
 <style lang="scss" scoped>
 
-.main {
+.main-mobile {
   background-color: burlywood;
 }
 

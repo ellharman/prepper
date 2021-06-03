@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // --- BootstrapVue custom SCSS variables ---
 //
 // Users can override these variables in their custom SCSS
@@ -30,8 +32,8 @@ $b-custom-checkbox-indicator-border-radius-sm: $border-radius-sm !default;
 // Custom switch sizes
 $b-custom-switch-width-lg: $b-custom-control-indicator-size-lg * 1.75 !default;
 $b-custom-switch-width-sm: $b-custom-control-indicator-size-sm * 1.75 !default;
-$b-custom-switch-indicator-border-radius-lg: $b-custom-control-indicator-size-lg / 2 !default;
-$b-custom-switch-indicator-border-radius-sm: $b-custom-control-indicator-size-sm / 2 !default;
+$b-custom-switch-indicator-border-radius-lg: math.div($b-custom-control-indicator-size-lg, 2) !default;
+$b-custom-switch-indicator-border-radius-sm: math.div($b-custom-control-indicator-size-sm, 2) !default;
 $b-custom-switch-indicator-size-lg: calc(
   #{$b-custom-control-indicator-size-lg} - #{$custom-control-indicator-border-width * 4}
 ) !default;

@@ -13,11 +13,14 @@ Main page
 - Should display the name of the character on the button if one has been set
 - Should be able to keep multiple campaign instances at once
 
-Classes
+Character sheet
 - Should define a JSON schema for classes so that others can contribute their own/setup custom classes within the schema
-
-Abilities
+- Should have an edit mode and a play mode, to hide unnecesasry things that won't change once you start playing
+- Gold, load, level and XP should persist/hover at the bottom of the screen
 - Should be able to hide currently unlevelled abilities
+
+Other
+- Should have a dice utility
 
 ## Packages to use?
 - rpg-awesome CSS font

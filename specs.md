@@ -18,12 +18,14 @@ Character sheet
 - Should have an edit mode and a play mode, to hide unnecesasry things that won't change once you start playing
 - Gold, load, level and XP should persist/hover at the bottom of the screen
 - Should be able to hide currently unlevelled abilities
+- Should store current character sheet state in localStorage until proper storage/account management is set up. An option to download a JSON of the current character sheet would also be a good option.
 
 Other
 - Should have a dice utility
 
 ## Packages to use?
 - rpg-awesome CSS font
+- vuex-persist
 
 ## Project setup
 ```

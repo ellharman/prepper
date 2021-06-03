@@ -15,7 +15,6 @@ Main page
 
 Classes
 - Should define a JSON schema for classes so that others can contribute their own/setup custom classes within the schema
-- Should 
 
 Abilities
 - Should be able to hide currently unlevelled abilities

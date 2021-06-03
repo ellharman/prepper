@@ -1,0 +1,908 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"class": {
+			"type": "string"
+		},
+		"personalDetails": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"pronouns": {
+					"type": "string"
+				},
+				"exampleNames": {
+					"type": "string"
+				},
+				"look": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": true,
+			"required": [
+				"name",
+				"pronouns",
+				"exampleNames",
+				"look"
+			]
+		},
+		"stats": {
+			"type": "object",
+			"properties": {
+				"damageStats": {
+					"type": "object",
+					"properties": {
+						"armor": {
+							"type": "integer"
+						},
+						"damage": {
+							"type": "integer"
+						},
+						"hitPoints": {
+							"type": "integer"
+						},
+						"hitPointsBase": {
+							"type": "integer"
+						},
+						"hitPointsMod": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": true,
+					"required": [
+						"armor",
+						"damage",
+						"hitPoints",
+						"hitPointsBase",
+						"hitPointsMod"
+					]
+				},
+				"statBlock": {
+					"type": "object",
+					"properties": {
+						"strength": {
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						"dexterity": {
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						"constitution": {
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						"intelligence": {
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						"wisdom": {
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						"charisma": {
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						}
+					},
+					"additionalProperties": true,
+					"required": [
+						"strength",
+						"dexterity",
+						"constitution",
+						"intelligence",
+						"wisdom",
+						"charisma"
+					]
+				},
+				"toAssign": {
+					"type": "array",
+					"items": [
+						{
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						{
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						{
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						{
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						{
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						},
+						{
+							"type": "array",
+							"items": [
+								{
+									"type": "integer"
+								},
+								{
+									"type": "integer"
+								}
+							],
+							"additionalItems": true
+						}
+					],
+					"additionalItems": true
+				},
+				"recommended": {
+					"type": "array",
+					"items": [
+						{
+							"type": "string"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				}
+			},
+			"additionalProperties": true,
+			"required": [
+				"damageStats",
+				"statBlock",
+				"toAssign",
+				"recommended"
+			]
+		},
+		"alignments": {
+			"type": "array",
+			"items": [
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				}
+			],
+			"additionalItems": true
+		},
+		"bonds": {
+			"type": "array",
+			"items": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "string"
+				},
+				{
+					"type": "string"
+				},
+				{
+					"type": "string"
+				},
+				{
+					"type": "string"
+				},
+				{
+					"type": "string"
+				}
+			],
+			"additionalItems": true
+		},
+		"backgrounds": {
+			"type": "array",
+			"items": [
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				}
+			],
+			"additionalItems": true
+		},
+		"races": {
+			"type": "array",
+			"items": [
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				},
+				{
+					"type": "array",
+					"items": [
+						{
+							"type": "boolean"
+						},
+						{
+							"type": "string"
+						}
+					],
+					"additionalItems": true
+				}
+			],
+			"additionalItems": true
+		},
+		"deathMove": {
+			"type": "string"
+		},
+		"currency": {
+			"type": "array",
+			"items": [
+				{
+					"type": "string"
+				},
+				{
+					"type": "integer"
+				}
+			],
+			"additionalItems": true
+		},
+		"load": {
+			"type": "object",
+			"properties": {
+				"loadBase": {
+					"type": "integer"
+				},
+				"loadMod": {
+					"type": "integer"
+				},
+				"currentLoad": {
+					"type": "integer"
+				}
+			},
+			"additionalProperties": true,
+			"required": [
+				"loadBase",
+				"loadMod",
+				"currentLoad"
+			]
+		},
+		"expStats": {
+			"type": "object",
+			"properties": {
+				"level": {
+					"type": "integer"
+				},
+				"XP": {
+					"type": "integer"
+				}
+			},
+			"additionalProperties": true,
+			"required": [
+				"level",
+				"XP"
+			]
+		},
+		"inventory": {
+			"type": "object",
+			"properties": {
+				"starterItems": {
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"properties": {
+								"text": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"text"
+							]
+						},
+						{
+							"type": "object",
+							"properties": {
+								"isBullet": {
+									"type": "boolean"
+								},
+								"text": {
+									"type": "array",
+									"items": [
+										{
+											"type": "string"
+										},
+										{
+											"type": "string"
+										},
+										{
+											"type": "string"
+										},
+										{
+											"type": "string"
+										},
+										{
+											"type": "string"
+										},
+										{
+											"type": "string"
+										}
+									],
+									"additionalItems": true
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"isBullet",
+								"text"
+							]
+						}
+					],
+					"additionalItems": true
+				},
+				"inventoryText": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": true,
+			"required": [
+				"starterItems",
+				"inventoryText"
+			]
+		},
+		"moves": {
+			"type": "object",
+			"properties": {
+				"startingMoves": {
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"properties": {
+								"isLevelled": {
+									"type": "boolean"
+								},
+								"name": {
+									"type": "string"
+								},
+								"body": {
+									"type": "array",
+									"items": [
+										{
+											"type": "object",
+											"properties": {
+												"text": {
+													"type": "string"
+												}
+											},
+											"additionalProperties": true,
+											"required": [
+												"text"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"text": {
+													"type": "string"
+												}
+											},
+											"additionalProperties": true,
+											"required": [
+												"text"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"isRollBlock": {
+													"type": "boolean"
+												},
+												"text": {
+													"type": "array",
+													"items": [
+														{
+															"type": "string"
+														},
+														{
+															"type": "string"
+														},
+														{
+															"type": "string"
+														}
+													],
+													"additionalItems": true
+												}
+											},
+											"additionalProperties": true,
+											"required": [
+												"isRollBlock",
+												"text"
+											]
+										}
+									],
+									"additionalItems": true
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"isLevelled",
+								"name",
+								"body"
+							]
+						}
+					],
+					"additionalItems": true
+				},
+				"advancedMoves": {
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"properties": {
+								"isLevelled": {
+									"type": "boolean"
+								},
+								"name": {
+									"type": "string"
+								},
+								"body": {
+									"type": "array",
+									"items": [
+										{
+											"type": "object",
+											"properties": {
+												"text": {
+													"type": "string"
+												}
+											},
+											"additionalProperties": true,
+											"required": [
+												"text"
+											]
+										}
+									],
+									"additionalItems": true
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"isLevelled",
+								"name",
+								"body"
+							]
+						}
+					],
+					"additionalItems": true
+				},
+				"masterMoves": {
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"properties": {
+								"isLevelled": {
+									"type": "boolean"
+								},
+								"name": {
+									"type": "string"
+								},
+								"body": {
+									"type": "array",
+									"items": [
+										{
+											"type": "object",
+											"properties": {
+												"text": {
+													"type": "string"
+												}
+											},
+											"additionalProperties": true,
+											"required": [
+												"text"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"isRollBlock": {
+													"type": "boolean"
+												},
+												"text": {
+													"type": "array",
+													"items": [
+														{
+															"type": "string"
+														},
+														{
+															"type": "string"
+														},
+														{
+															"type": "string"
+														}
+													],
+													"additionalItems": true
+												}
+											},
+											"additionalProperties": true,
+											"required": [
+												"isRollBlock",
+												"text"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"text": {
+													"type": "string"
+												}
+											},
+											"additionalProperties": true,
+											"required": [
+												"text"
+											]
+										},
+										{
+											"type": "object",
+											"properties": {
+												"isFillBlock": {
+													"type": "boolean"
+												},
+												"text": {
+													"type": "string"
+												}
+											},
+											"additionalProperties": true,
+											"required": [
+												"isFillBlock",
+												"text"
+											]
+										}
+									],
+									"additionalItems": true
+								}
+							},
+							"additionalProperties": true,
+							"required": [
+								"isLevelled",
+								"name",
+								"body"
+							]
+						}
+					],
+					"additionalItems": true
+				}
+			},
+			"additionalProperties": true,
+			"required": [
+				"startingMoves",
+				"advancedMoves",
+				"masterMoves"
+			]
+		}
+	},
+	"additionalProperties": true,
+	"required": [
+		"class",
+		"personalDetails",
+		"stats",
+		"alignments",
+		"bonds",
+		"backgrounds",
+		"races",
+		"deathMove",
+		"currency",
+		"load",
+		"expStats",
+		"inventory",
+		"moves"
+	]
+}

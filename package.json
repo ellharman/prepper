@@ -12,6 +12,7 @@
   "dependencies": {
     "@babel/core": "^7.14.3",
     "@popperjs/core": "^2.9.2",
+    "ajv": "^8.5.0",
     "bootstrap": "^4.0.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",

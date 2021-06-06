@@ -1,10 +1,10 @@
 import glob from 'glob-promise';
 import Ajv from 'ajv';
-import schema from '../../src/assets/schema.json';
+import schema from '../../src/assets/playbook-schemas/schema.json';
 
 // I love the globber and the globber loves me
 // Gets the paths of all playbook JSONs in the playbooks folder
-const playbooks = glob.sync('src/assets/playbooks/**/*.json');
+const playbooks = glob.sync('./src/assets/playbooks/**/*.json');
 
 const ajv = new Ajv({ strictTuples: false });
 
@@ -12,8 +12,8 @@ describe('Playbook loading', () => {
   it('should be testing against an array of paths to playbook JSONs', () => {
     expect(playbooks).toBeInstanceOf(Array);
   });
-  // Validates each of the playbooks at the paths in src/assets/playbooks against
-  // the schema at src/assets/
+  // Validates each of the playbooks at the paths in /public/playbooks against
+  // the schema at public/playbook-schemas
   test.each(playbooks)(
     'validate JSON at %s',
     (path) => {

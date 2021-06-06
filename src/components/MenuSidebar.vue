@@ -8,24 +8,10 @@
     bg-variant="dark"
   >
     <div id="nav">
-      <router-link to="/main">Main</router-link> |
-      <router-link to="/mainmobile">MainMobile</router-link>
+      <router-link to="/main">Desktop</router-link> |
+      <router-link to="/mainmobile">Mobile</router-link>
     </div>
-    <b-dropdown
-      id="dropdown-1"
-      block
-      text="Select Campaign"
-      class="m-md-2"
-      menu-class="w-100"
-      variant="dark"
-    >
-      <b-dropdown-item>First Action</b-dropdown-item>
-      <b-dropdown-item>Second Action</b-dropdown-item>
-      <b-dropdown-item>Third Action</b-dropdown-item>
-      <b-dropdown-divider></b-dropdown-divider>
-      <b-dropdown-item active>Active action</b-dropdown-item>
-      <b-dropdown-item disabled>Disabled action</b-dropdown-item>
-    </b-dropdown>
+    <playbook-selector />
   </b-sidebar>
 </template>
 
@@ -35,18 +21,27 @@
 
   a {
     font-weight: bold;
-    color: #d9dbc5;
+    color:rgb(252, 214, 0);
 
     &.router-link-exact-active {
       color: rgb(212, 95, 223);
     }
   }
 }
-
 </style>
 
 <script>
+import PlaybookSelector from './PlaybookSelector.vue';
+
 export default {
   name: 'MenuSidebar',
+  data() {
+    return {
+      message: 'test',
+    };
+  },
+  components: {
+    PlaybookSelector,
+  },
 };
 </script>

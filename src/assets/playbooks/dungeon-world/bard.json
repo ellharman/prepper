@@ -1,5 +1,7 @@
 {
-  "className": "The Cook",
+  "playbook": "dungeon-world",
+  "classID": "bard",
+  "className": "The Bard",
   "personalDetails": {
     "name": "",
     "pronouns": "",

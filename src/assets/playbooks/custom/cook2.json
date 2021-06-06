@@ -1,5 +1,7 @@
 {
-  "className": "The Cook",
+  "playbook": "custom",
+  "classID": "cook2",
+  "className": "The Cook 2",
   "personalDetails": {
     "name": "",
     "pronouns": "",

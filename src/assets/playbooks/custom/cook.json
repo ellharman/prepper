@@ -1,4 +1,6 @@
 {
+  "playbook": "custom",
+  "classID": "cook",
   "className": "The Cook",
   "personalDetails": {
     "name": "",

@@ -6,13 +6,13 @@ import schema from '../../src/assets/schema.json';
 // Gets the paths of all playbook JSONs in the playbooks folder
 const playbooks = glob.sync('src/assets/playbooks/**/*.json');
 
-const ajv = new Ajv({strictTuples: false});
+const ajv = new Ajv({ strictTuples: false });
 
 describe('Playbook loading', () => {
   it('should be testing against an array of paths to playbook JSONs', () => {
     expect(playbooks).toBeInstanceOf(Array);
   });
-  // This test validates each of the playbooks at the paths in src/assets/playbooks against
+  // Validates each of the playbooks at the paths in src/assets/playbooks against
   // the schema at src/assets/
   test.each(playbooks)(
     'validate JSON at %s',

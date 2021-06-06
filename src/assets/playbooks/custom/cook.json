@@ -14,6 +14,10 @@
       "hitPointsBase": 8,
       "hitPointsMod": "constitution"
     },
+    "expStats": {
+      "level": 0,
+      "XP": 0
+    },
     "statBlock": {
       "strength": [0, 0],
       "dexterity": [0, 0],
@@ -21,6 +25,14 @@
       "intelligence": [0, 0],
       "wisdom": [0, 0],
       "charisma": [0, 0]
+    },
+    "statNameReplacements": {
+      "strength": "",
+      "dexterity": "",
+      "constitution": "",
+      "intelligence": "",
+      "wisdom": "",
+      "charisma": ""
     },
     "toAssign": [
       [16, 2],
@@ -42,12 +54,12 @@
     ]
   ],
   "bonds": [
-    "$NAME never leaves time for the good things in life. I will show them what they’re missing.",
-    "$NAME is unsure about my methods. I’ll show them why I do things my way.",
-    "$NAME loves my cooking! I will make them the best thing they ever tasted.",
-    "$NAME comes to me for advice sometimes. I help where I can.",
-    "I have a lot to learn from $NAME, whether they care to teach me is another matter.",
-    ""
+    ["", "$NAME never leaves time for the good things in life. I will show them what they’re missing."],
+    ["", "$NAME is unsure about my methods. I’ll show them why I do things my way."],
+    ["", "$NAME loves my cooking! I will make them the best thing they ever tasted."],
+    ["", "$NAME comes to me for advice sometimes. I help where I can."],
+    ["", "I have a lot to learn from $NAME, whether they care to teach me is another matter."],
+    ["", ""]
   ],
   "backgrounds": [
     [
@@ -91,14 +103,11 @@
   ],
   "deathMove": "As part of your normal Last Breath roll: When you die, you may have one last meal with Death. Should death appreciate your hospitality and see fit to return you, you will find on you a token of Death’s favor.",
   "currency": ["Gold", 0],
+  "currencyNameReplacment": "",
   "load": {
     "loadBase": 0,
     "loadMod": 0,
     "currentLoad": 0
-  },
-  "expStats": {
-    "level": 0,
-    "XP": 0
   },
   "inventory": {
     "starterItems": [
@@ -112,8 +121,7 @@
           "5 staple ingredients",
           "An unwieldy pack of common kitchen utensils, enough to cook almost any meal",
           "Dungeon rations (5 uses, 1 weight)",
-          "Mail Armour (1 armour, 1 weight)",
-          ""
+          "Mail Armour (1 armour, 1 weight)"
         ]
       }
     ],
@@ -143,41 +151,41 @@
       }
     ],
     "advancedMoves": [
-        {
-            "isLevelled": false,
-            "name": "A Taste for Violence",
-            "body": [
-                {
-                    "text": "Get +1 on any hack-and-slash roll against a creature you have cooked or eaten on screen when you use your culinary weapon or experience cooking it to fight it. Describe how your culinary experience helped you."
-                }
-            ]
-        }
+      {
+        "isLevelled": false,
+        "name": "A Taste for Violence",
+        "body": [
+          {
+            "text": "Get +1 on any hack-and-slash roll against a creature you have cooked or eaten on screen when you use your culinary weapon or experience cooking it to fight it. Describe how your culinary experience helped you."
+          }
+        ]
+      }
     ],
     "masterMoves": [
-        {
-            "isLevelled": false,
-            "name": "Spice Rack",
-            "body": [
-                {
-                    "text": "When taking a long break, you may attempt to prepare a secret ingredient for long term storage. Roll +WIS and lose the remaining portions of the ingredient."
-                },
-                {
-                    "isRollBlock": true,
-                    "text": [
-                        "you may add this ingredient's effect as is to the list below.",
-                        "you may add a significantly weakened version of this ingredient's effect to the list below. Discuss with the GM what that means for this ingredient.",
-                        "your preparation fails, leaving you with just one use of the ingredient. You may not attempt to use this move on that ingredient unless you get more."
-                    ]
-                },
-                {
-                    "text": "Your spice rack can hold up to 3 ingredients at any one time. When an ingredient is in your spice rack you may treat it as if it were in your staple meal effects list."
-                },
-                {
-                    "isFillBlock": true,
-                    "text": ""
-                }
+      {
+        "isLevelled": false,
+        "name": "Spice Rack",
+        "body": [
+          {
+            "text": "When taking a long break, you may attempt to prepare a secret ingredient for long term storage. Roll +WIS and lose the remaining portions of the ingredient."
+          },
+          {
+            "isRollBlock": true,
+            "text": [
+              "you may add this ingredient's effect as is to the list below.",
+              "you may add a significantly weakened version of this ingredient's effect to the list below. Discuss with the GM what that means for this ingredient.",
+              "your preparation fails, leaving you with just one use of the ingredient. You may not attempt to use this move on that ingredient unless you get more."
             ]
-        }
+          },
+          {
+            "text": "Your spice rack can hold up to 3 ingredients at any one time. When an ingredient is in your spice rack you may treat it as if it were in your staple meal effects list."
+          },
+          {
+            "isFillBlock": true,
+            "text": ""
+          }
+        ]
+      }
     ]
   }
 }

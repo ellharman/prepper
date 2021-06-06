@@ -21,12 +21,7 @@
           "type": "string"
         }
       },
-      "required": [
-        "name",
-        "pronouns",
-        "exampleNames",
-        "look"
-      ]
+      "required": ["name", "pronouns", "exampleNames", "look"]
     },
     "stats": {
       "type": "object",
@@ -58,37 +53,49 @@
             "hitPointsMod"
           ]
         },
+        "expStats": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "integer"
+            },
+            "XP": {
+              "type": "integer"
+            }
+          },
+          "required": ["level", "XP"]
+        },
         "statBlock": {
           "type": "object",
           "properties": {
             "strength": {
               "type": "array",
-              "items": { "type": "number" },
+              "items": { "type": "integer" },
               "minItems": 2
             },
             "dexterity": {
               "type": "array",
-              "items": { "type": "number" },
+              "items": { "type": "integer" },
               "minItems": 2
             },
             "constitution": {
               "type": "array",
-              "items": { "type": "number" },
+              "items": { "type": "integer" },
               "minItems": 2
             },
             "intelligence": {
               "type": "array",
-              "items": { "type": "number" },
+              "items": { "type": "integer" },
               "minItems": 2
             },
             "wisdom": {
               "type": "array",
-              "items": { "type": "number" },
+              "items": { "type": "integer" },
               "minItems": 2
             },
             "charisma": {
               "type": "array",
-              "items": { "type": "number" },
+              "items": { "type": "integer" },
               "minItems": 2
             }
           },
@@ -104,12 +111,12 @@
         },
         "toAssign": {
           "type": "array",
-          "items": { "type": "array" },
+          "items": { "type": "array", "minItems": 2, "maxItems": 2 },
           "minItems": 6
         },
         "recommended": {
           "type": "array",
-          "items": true
+          "items": { "type": "string" }
         },
         "statNameReplacements": {
           "type": "object",
@@ -133,6 +140,7 @@
               "type": "string"
             }
           },
+          "minProperties": 6,
           "required": [
             "strength",
             "dexterity",
@@ -145,6 +153,7 @@
       },
       "required": [
         "damageStats",
+        "expStats",
         "statBlock",
         "toAssign",
         "recommended"
@@ -152,26 +161,57 @@
     },
     "alignments": {
       "type": "array",
-      "items": true
+      "items": {
+        "type": "array",
+        "items": [
+          { "type": "boolean" },
+          { "type": "string" },
+          { "type": "string" }
+        ],
+        "maxItems": 3
+      },
+      "minItems": 3
     },
     "bonds": {
       "type": "array",
-      "items": true
+      "items": {
+        "type": "array",
+        "items": [{ "type": "string" }, { "type": "string" }],
+        "minItems": 2,
+        "maxItems": 2
+      },
+      "minItems": 3
     },
     "backgrounds": {
       "type": "array",
-      "items": true
+      "minItems": 3,
+      "items": {
+        "type": "array",
+        "items": [
+          { "type": "boolean" },
+          { "type": "string" },
+          { "type": "string" }
+        ],
+        "maxItems": 3
+      }
     },
     "races": {
       "type": "array",
-      "items": true
+      "items": {
+        "type": "array",
+        "items": [{ "type": "boolean" }, { "type": "string" }],
+        "minItems": 2,
+        "maxItems": 2
+      }
     },
     "deathMove": {
       "type": "string"
     },
     "currency": {
       "type": "array",
-      "items": true
+      "items": [{ "type": "string", "maxLength": 20 }, { "type": "integer" }],
+      "minItems": 2,
+      "maxItems": 2
     },
     "load": {
       "type": "object",
@@ -186,64 +226,98 @@
           "type": "integer"
         }
       },
-      "required": [
-        "loadBase",
-        "loadMod",
-        "currentLoad"
-      ]
-    },
-    "expStats": {
-      "type": "object",
-      "properties": {
-        "level": {
-          "type": "integer"
-        },
-        "XP": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "level",
-        "XP"
-      ]
+      "required": ["loadBase", "loadMod", "currentLoad"]
     },
     "inventory": {
       "type": "object",
       "properties": {
         "starterItems": {
           "type": "array",
-          "items": true
+          "items": [
+            {
+              "type": "object",
+              "minProperties": 1,
+              "maxProperties": 1,
+              "properties": { "text": { "const": "At game start you get:" } },
+              "required": ["text"]
+            },
+            {
+              "type": "object",
+              "minProperties": 2,
+              "maxProperties": 2,
+              "properties": {
+                "isBullet": {"const": true},
+                "text": {
+                  "type": "array",
+                  "minItems": 1
+                }
+              },
+              "required": ["isBullet", "text"]
+            }
+          ]
         },
         "inventoryText": {
           "type": "string"
         }
       },
-      "required": [
-        "starterItems",
-        "inventoryText"
-      ]
+      "required": ["starterItems", "inventoryText"]
     },
     "moves": {
       "type": "object",
       "properties": {
         "startingMoves": {
           "type": "array",
-          "items": true
+          "items": {
+            "type": "object",
+            "minProperties": 3,
+            "maxProperties": 3,
+            "properties": {
+              "isLevelled": {"type": "boolean"},
+              "name": {"type": "string"},
+              "body": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          },
+          "minItems": 1
         },
         "advancedMoves": {
           "type": "array",
-          "items": true
+          "items": {
+            "type": "object",
+            "minProperties": 3,
+            "maxProperties": 3,
+            "properties": {
+              "isLevelled": {"type": "boolean"},
+              "name": {"type": "string"},
+              "body": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          },
+          "minItems": 1
         },
         "masterMoves": {
           "type": "array",
-          "items": true
+          "items": {
+            "type": "object",
+            "minProperties": 3,
+            "maxProperties": 3,
+            "properties": {
+              "isLevelled": {"type": "boolean"},
+              "name": {"type": "string"},
+              "body": {
+                "type": "array",
+                "minItems": 1
+              }
+            }
+          },
+          "minItems": 1
         }
       },
-      "required": [
-        "startingMoves",
-        "advancedMoves",
-        "masterMoves"
-      ]
+      "required": ["startingMoves", "advancedMoves", "masterMoves"]
     }
   },
   "required": [
@@ -253,11 +327,6 @@
     "alignments",
     "bonds",
     "backgrounds",
-    "races",
-    "deathMove",
-    "currency",
-    "load",
-    "expStats",
     "inventory",
     "moves"
   ]

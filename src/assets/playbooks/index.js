@@ -4,6 +4,12 @@ import bard from './dungeon-world/bard.json';
 import cleric from './dungeon-world/cleric.json';
 import ranger from './dungeon-world/ranger.json';
 
-const playbookData = [cook, cook2, bard, cleric, ranger];
+const playbookData = {
+  cook,
+  cook2,
+  bard,
+  cleric,
+  ranger,
+};
 
 export default playbookData;

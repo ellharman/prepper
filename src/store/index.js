@@ -5,12 +5,12 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    selectedPlaybook: '',
+    currentPlaybook: '',
   },
   mutations: {
-    updateSelectedPlaybook(state, input) {
-      state.selectedPlaybook = input;
-      console.log(`Updated current playbook to ${state.selectedPlaybook}`);
+    updateCurrentPlaybook(state, input) {
+      state.currentPlaybook = input;
+      // console.log(`Updated current playbook to ${JSON.stringify(input)}`);
     },
   },
   actions: {

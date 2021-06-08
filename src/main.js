@@ -6,7 +6,9 @@ import store from './store';
 import './assets/style/custom.scss';
 
 Vue.config.productionTip = false;
-Vue.use(BootstrapVue);
+Vue.use(BootstrapVue, {
+  BFormInput: { lazy: true },
+});
 Vue.use(BootstrapVueIcons);
 
 new Vue({

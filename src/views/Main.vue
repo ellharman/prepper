@@ -7,7 +7,6 @@
           <character-info />
         </b-col>
         <b-col>
-          stats
         </b-col>
         <b-col>
           moves
@@ -23,13 +22,11 @@
   background-color: burlywood;
 }
 
-.grid-container {
-  background-color: chartreuse;
-}
+// .grid-container {
+// }
 
 .col {
   border: solid;
-  background-color: cadetblue;
 }
 </style>
 

@@ -41,7 +41,6 @@ export default {
       },
       set(value) {
         this.$store.commit('updateCurrentPlaybook', playbookData[value]);
-        console.log(this.$store.state.currentPlaybook.alignments);
       },
     },
   },

@@ -16,6 +16,7 @@
     "bootstrap": "^4.0.0",
     "bootstrap-vue": "^2.21.2",
     "core-js": "^3.6.5",
+    "dot-prop": "^6.0.1",
     "glob": "^7.1.7",
     "glob-promise": "^4.2.0",
     "jest-environment-jsdom-fifteen": "^1.0.2",

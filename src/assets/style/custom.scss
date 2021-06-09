@@ -1,0 +1,22 @@
+// Include Bootstrap and BootstrapVue SCSS files
+
+.b-sidebar > .b-sidebar-header {
+    color:rgb(252, 214, 0);
+    font-size: 2em;
+    display: block;
+    align-self: center;
+    padding-bottom: 0;
+}
+
+b, strong {
+    padding-bottom: 0;
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+// .b-sidebar-body {
+
+// }
+
+@import '~bootstrap';
+@import '~bootstrap-vue';

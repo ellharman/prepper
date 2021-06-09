@@ -1,16 +1,11 @@
 <template>
   <div id="app">
-    <div class="el-container">
-    <!-- <div id="nav">
-      <router-link to="/">Main</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
-    <router-view/>
-    </div>
+    <menu-sidebar />
+    <router-view />
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   font-family: Open Sans, Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,16 +14,19 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.container {
+  background-color: teal;
+  margin: 0px;
 }
 </style>
+
+<script>
+import MenuSidebar from '@/components/MenuSidebar.vue';
+
+export default {
+  Name: 'App',
+  components: {
+    MenuSidebar,
+  },
+};
+</script>

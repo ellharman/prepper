@@ -26,4 +26,5 @@ pnpm-debug.log*
 *.sw?
 
 # Dev stuff
-specs.md
+*.pdf
+src/components/ComponentTemplate.vue

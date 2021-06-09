@@ -1,0 +1,193 @@
+{
+  "playbook": "custom",
+  "classID": "cook2",
+  "className": "The Cook 2",
+  "personalDetails": {
+    "name": "",
+    "pronouns": "",
+    "exampleNames": "Tig, Rollo, Nan, Olga, Tulve, Jurgen (round vowels and gentle consonants) Oeife, Nym, Stith, Teibhe (sharp vowels and non-standard consonants) Sosban, Bowlen, Berwi, Rhost, Trin (culinary words in Welsh)",
+    "look": ""
+  },
+  "stats": {
+    "damageStats": {
+      "armor": 0,
+      "damage": 0,
+      "hitPoints": 0,
+      "hitPointsBase": 8,
+      "hitPointsMod": "constitution"
+    },
+    "expStats": {
+      "level": 0,
+      "XP": 0
+    },
+    "statBlock": {
+      "strength": [0, 0],
+      "dexterity": [0, 0],
+      "constitution": [0, 0],
+      "intelligence": [0, 0],
+      "wisdom": [0, 0],
+      "charisma": [0, 0]
+    },
+    "statNameReplacements": {
+      "strength": "",
+      "dexterity": "",
+      "constitution": "",
+      "intelligence": "",
+      "wisdom": "",
+      "charisma": ""
+    },
+    "toAssign": [
+      [16, 2],
+      [15, 1],
+      [13, 1],
+      [12, 0],
+      [9, 0],
+      [8, -1]
+    ],
+    "recommended": ["wisdom", "strength"]
+  },
+  "alignments": [
+    [false, "good", "Feed those in need"],
+    [false, "neutral", "Feed the powerful"],
+    [
+      false,
+      "chaotic",
+      "Feed somebody (including yourself) something as an experiment"
+    ]
+  ],
+  "bonds": [
+    ["", "$NAME never leaves time for the good things in life. I will show them what they’re missing."],
+    ["", "$NAME is unsure about my methods. I’ll show them why I do things my way."],
+    ["", "$NAME loves my cooking! I will make them the best thing they ever tasted."],
+    ["", "$NAME comes to me for advice sometimes. I help where I can."],
+    ["", "I have a lot to learn from $NAME, whether they care to teach me is another matter."],
+    ["", ""]
+  ],
+  "backgrounds": [
+    [
+      false,
+      "Tavernkeeper",
+      "You’re good at parties. Take +1 to aid or interfere rolls."
+    ],
+    [
+      false,
+      "Sous Chef",
+      "You have a discerning palette. When you consume a meal, you may learn an interesting and useful fact about the chef."
+    ],
+    [
+      false,
+      "Brewer",
+      "You may take an extra staple meal effect when you use Cook to brew an alcoholic beverage."
+    ],
+    [
+      false,
+      "Recipe Book Writer",
+      " You may take an extra staple meal effect when cooking a meal from another culture, respecting their practices."
+    ],
+    [
+      false,
+      "Battle Chef",
+      "You may take an extra staple meal effect when cooking with an ingredient you had to fight to procure."
+    ]
+  ],
+  "races": [
+    [false, "Orc"],
+    [false, "Elf"],
+    [false, "Human"],
+    [false, "Halfling"],
+    [false, "Dwarf"],
+    [false, "Fae"],
+    [false, "Dust Devil"],
+    [false, "Magical Construct"],
+    [false, "Talking Rat"],
+    [false, "Undead"],
+    [false, ""]
+  ],
+  "deathMove": "As part of your normal Last Breath roll: When you die, you may have one last meal with Death. Should death appreciate your hospitality and see fit to return you, you will find on you a token of Death’s favor.",
+  "currency": ["Gold", 0],
+  "currencyNameReplacment": "",
+  "load": {
+    "loadBase": 0,
+    "loadMod": 0,
+    "currentLoad": 0
+  },
+  "inventory": {
+    "starterItems": [
+      {
+        "text": "At game start you get:"
+      },
+      {
+        "isBullet": true,
+        "text": [
+          "A large, unique kitchen utensil you can use in combat (a large knife, a wok, an oversized skewer) which takes the stats of a common weapon (your choice)",
+          "5 staple ingredients",
+          "An unwieldy pack of common kitchen utensils, enough to cook almost any meal",
+          "Dungeon rations (5 uses, 1 weight)",
+          "Mail Armour (1 armour, 1 weight)"
+        ]
+      }
+    ],
+    "inventoryText": ""
+  },
+  "moves": {
+    "startingMoves": [
+      {
+        "isLevelled": true,
+        "name": "Cook",
+        "body": [
+          {
+            "text": "When you have an uninterrupted hour or so, utensils, clean water and heat you may cook a meal for up to 10 people (or up to minimum secret ingredient portions used if using one or more secret ingredients). All meals use exactly three ingredients. Effects on characters that eat this meal last until they rest for a long time (GM’s discretion). No new effects on characters can be gained from your food until the effects of the last meal have worn off."
+          },
+          {
+            "text": "When you cook a meal, spend 3 ingredients and choose 1 effect from the staple meal effects list.For each gourmet ingredient spent you may choose one different additional effect from the staple or gourmet meal effects lists. For each secret ingredient used, list its effect like the others, then roll +WIS:"
+          },
+          {
+            "isRollBlock": true,
+            "text": [
+              "you get all the chosen effects.",
+              "you get all the chosen effects,but one effect introduces complications to your party.",
+              "something about the dish is off. It only conveys one of the chosen effects, your choice. However, it will also do something undesirable when eaten, GM’s choice. You will not know what this is until somebody eats the meal."
+            ]
+          }
+        ]
+      }
+    ],
+    "advancedMoves": [
+      {
+        "isLevelled": false,
+        "name": "A Taste for Violence",
+        "body": [
+          {
+            "text": "Get +1 on any hack-and-slash roll against a creature you have cooked or eaten on screen when you use your culinary weapon or experience cooking it to fight it. Describe how your culinary experience helped you."
+          }
+        ]
+      }
+    ],
+    "masterMoves": [
+      {
+        "isLevelled": false,
+        "name": "Spice Rack",
+        "body": [
+          {
+            "text": "When taking a long break, you may attempt to prepare a secret ingredient for long term storage. Roll +WIS and lose the remaining portions of the ingredient."
+          },
+          {
+            "isRollBlock": true,
+            "text": [
+              "you may add this ingredient's effect as is to the list below.",
+              "you may add a significantly weakened version of this ingredient's effect to the list below. Discuss with the GM what that means for this ingredient.",
+              "your preparation fails, leaving you with just one use of the ingredient. You may not attempt to use this move on that ingredient unless you get more."
+            ]
+          },
+          {
+            "text": "Your spice rack can hold up to 3 ingredients at any one time. When an ingredient is in your spice rack you may treat it as if it were in your staple meal effects list."
+          },
+          {
+            "isFillBlock": true,
+            "text": ""
+          }
+        ]
+      }
+    ]
+  }
+}

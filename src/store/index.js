@@ -5,8 +5,9 @@ import dotProp from 'dot-prop';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
+  strict: true,
   state: {
-    currentPlaybook: '',
+    currentPlaybook: null,
   },
   mutations: {
     updateCurrentPlaybook(state, input) {
@@ -14,11 +15,11 @@ export default new Vuex.Store({
       // console.log(`Updated current playbook to ${JSON.stringify(input)}`);
     },
     updatePlaybookProperty(state, payload) {
-      dotProp.set(state.currentPlaybook, payload.target, payload.value);
-      console.log(`Updated playbook data at ${payload.target} to ${dotProp.get(state.currentPlaybook, payload.target)}`);
-      console.log(state.currentPlaybook);
+      if (dotProp.has(state.currentPlaybook, payload.target)) {
+        dotProp.set(state.currentPlaybook, payload.target, payload.value);
+        console.log(`Updated playbook data at ${payload.target} to ${dotProp.get(state.currentPlaybook, payload.target)}`);
+      }
     },
   },
   actions: {},
-  modules: {},
 });

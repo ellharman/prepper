@@ -3,7 +3,7 @@
     I am MainMobile!
     <b-container class="grid-container">
       <b-row>
-        <b-col sm="auto">1 of 2</b-col>
+        <b-col sm="auto"> <character-info /> </b-col>
         <b-col sm="auto">2 of 2</b-col>
         <b-col sm="auto">notes</b-col>
       </b-row>
@@ -13,7 +13,6 @@
 </template>
 
 <style lang="scss" scoped>
-
 .main-mobile {
   background-color: burlywood;
 }
@@ -26,11 +25,14 @@
   border: solid;
   background-color: cadetblue;
 }
-
 </style>
 
 <script>
+import CharacterInfo from '@/components/CharacterInfo.vue';
+
 export default {
-  components: {},
+  components: {
+    CharacterInfo,
+  },
 };
 </script>

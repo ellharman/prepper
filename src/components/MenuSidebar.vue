@@ -7,26 +7,45 @@
     backdrop
     bg-variant="dark"
   >
-    <div id="nav">
-      <router-link to="/main">Desktop</router-link> |
-      <router-link to="/mainmobile">Mobile</router-link>
-    </div>
-    <playbook-selector />
+    <b-col>
+      <b-row class="sidebar-row">
+        <div id="nav">
+          <router-link to="/main">Desktop</router-link> |
+          <router-link to="/mainmobile">Mobile</router-link>
+        </div>
+      </b-row>
+      <b-row class="sidebar-row">
+        <playbook-selector />
+      </b-row>
+      <b-row class="sidebar-row">
+        menu item
+      </b-row>
+    </b-col>
   </b-sidebar>
 </template>
 
 <style lang="scss" scoped>
 #nav {
+  font-size: 1.5em;
   padding: 10px;
 
   a {
     font-weight: bold;
-    color:rgb(252, 214, 0);
+    color: rgb(252, 214, 0);
 
     &.router-link-exact-active {
       color: rgb(212, 95, 223);
     }
   }
+}
+
+.sidebar-row {
+  display: grid;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+  color: white;
 }
 </style>
 

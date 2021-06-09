@@ -18,8 +18,10 @@
 </template>
 
 <style lang="scss" scoped>
+
 .main {
-  background-color: burlywood;
+  background-color: rgb(64, 64, 64);
+  color: white;
 }
 
 // .grid-container {

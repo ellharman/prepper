@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-form-select
+      id="select"
       v-model="selectedPlaybook"
       :options="availablePlaybooks"
       size="auto"

@@ -12,12 +12,14 @@
             </b-button>
           </div>
         </b-col>
-        <b-col class="body"><b-form-input v-model="name" type="text" /></b-col>
+        <b-col class="body"
+          ><b-form-input v-model="name" type="text" lazy
+        /></b-col>
       </b-row>
       <b-row align-v="center">
         <b-col class="body">Pronouns:</b-col>
-        <b-col class="body"
-          ><b-form-input
+        <b-col class="body">
+          <b-form-input
             v-model="pronouns"
             type="text"
             placeholder="they/them, she/her, xe/xir, he/him, other!"
@@ -27,9 +29,15 @@
       <b-row align-v="center">
         <b-col class="body">Look:</b-col>
         <b-col class="body"
-          ><b-form-input
+          ><b-form-textarea
             v-model="look"
+            :placeholder="exampleLooks"
             type="text"
+            class="look-input"
+            rows="6"
+            style="white-space: pre"
+            no-resize
+            lazy
           />
         </b-col>
       </b-row>
@@ -56,7 +64,7 @@
 }
 
 ::-webkit-input-placeholder {
-  font-size: 0.8em !important;
+  font-size: 0.85em !important;
 }
 </style>
 
@@ -103,6 +111,9 @@ export default {
         };
         this.$store.commit('updatePlaybookProperty', payload);
       },
+    },
+    exampleLooks() {
+      return this.playbook.personalDetails.exampleLooks;
     },
     exampleNamePopover() {
       return {

@@ -3,10 +3,11 @@
   "classID": "cook",
   "className": "The Cook",
   "personalDetails": {
-    "name": "Bill",
+    "name": "",
     "pronouns": "",
     "exampleNames": "Tig, Rollo, Nan, Olga, Tulve, Jurgen (round vowels and gentle consonants) Oeife, Nym, Stith, Teibhe (sharp vowels and non-standard consonants) Sosban, Bowlen, Berwi, Rhost, Trin (culinary words in Welsh)",
-    "look": ""
+    "look": "",
+    "exampleLooks": "BODY: Chubby, Stocky or Toned\n\nEYES: Hungry, Discerning or Warm\n\nHAIR: Bald, Braided or In a Bun\n\nWEAR: Apron, Shirtless or Button-up Shirt"
   },
   "stats": {
     "damageStats": {

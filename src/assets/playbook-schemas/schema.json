@@ -25,6 +25,9 @@
         },
         "look": {
           "type": "string"
+        },
+        "exampleLooks": {
+          "type": "string"
         }
       },
       "required": ["name", "pronouns", "exampleNames", "look"]

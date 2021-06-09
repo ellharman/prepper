@@ -26,7 +26,7 @@ beforeEach(() => {
   };
 });
 
-describe('Desktop', () => {
+describe('Desktop initial load', () => {
   beforeEach(() => {
     jest.spyOn(window.screen, 'width', 'get').mockReturnValue(1920);
   });
@@ -46,7 +46,7 @@ describe('Desktop', () => {
   });
 });
 
-describe('Mobile', () => {
+describe('Mobile initial', () => {
   beforeEach(() => {
     jest.spyOn(window.screen, 'width', 'get').mockReturnValue(400);
   });

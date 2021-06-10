@@ -48,11 +48,11 @@
     "recommended": ["wisdom", "strength"]
   },
   "alignments": [
-    [false, "good", "Feed those in need"],
-    [false, "neutral", "Feed the powerful"],
+    [false, "Good", "Feed those in need"],
+    [false, "Neutral", "Feed the powerful"],
     [
       false,
-      "chaotic",
+      "Chaotic",
       "Feed somebody (including yourself) something as an experiment"
     ]
   ],

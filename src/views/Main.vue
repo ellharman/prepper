@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    I am Main!
+    Main
     <b-container class="grid-container" fluid>
       <b-row>
         <b-col>
@@ -20,16 +20,22 @@
 <style lang="scss" scoped>
 
 .main {
-  background-color: rgb(64, 64, 64);
-  color: white;
+  background-color: #060e1d;
+  color: #f5c884;
+  height: 100vh;
 }
 
-// .grid-container {
-// }
+.btn {
+  border: white;
+  font-size: 1em;
+  background-color: rgb(68, 68, 68);
+  color: inherit;
+}
 
 .col {
   border: solid;
 }
+
 </style>
 
 <script>

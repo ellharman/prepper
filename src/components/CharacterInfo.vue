@@ -7,7 +7,7 @@
       <b-row align-v="center">
         <b-col class="body">
           <div class="text-center">
-            <b-button v-b-popover.hover.top="exampleNamePopover">
+            <b-button v-b-popover.hover.top="exampleNamePopover" variant="dark">
               Name:
             </b-button>
           </div>
@@ -41,6 +41,18 @@
           />
         </b-col>
       </b-row>
+      <b-row> <b-col class="body">Alignments</b-col></b-row>
+      <b-row
+        ><b-col class="body">
+          <b-list-group>
+            <checkbox-info
+              class="checkbox-info"
+              v-for="(alignment, index) in alignments"
+              :playbookPath="'alignments'"
+              :index="index"
+              :key="alignments[index][2]"
+            ></checkbox-info></b-list-group></b-col
+      ></b-row>
     </b-col>
   </b-container>
 </template>
@@ -55,23 +67,35 @@
   font-size: 1.2em;
   padding-left: 0px;
   padding-right: 0px;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
+}
+
+input,
+textarea {
+  border: #081429;
+  background-color: rgb(68, 68, 68);
+  color: rgb(204, 200, 200);
 }
 
 .btn {
   font-size: 1em;
+  background-color: rgb(68, 68, 68);
+  color: inherit;
 }
 
 ::-webkit-input-placeholder {
   font-size: 0.85em !important;
+  color: rgb(204, 200, 200);
 }
 </style>
 
 <script>
+import CheckboxInfo from './CheckboxInfo.vue';
+
 export default {
   name: 'CharacterInfo',
-  methods: {},
+  components: { CheckboxInfo },
   computed: {
     playbook() {
       return this.$store.state.currentPlaybook;
@@ -120,6 +144,9 @@ export default {
         title: () => 'Example names',
         content: () => this.playbook.personalDetails.exampleNames,
       };
+    },
+    alignments() {
+      return this.playbook.alignments;
     },
   },
 };

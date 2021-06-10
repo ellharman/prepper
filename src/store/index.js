@@ -15,11 +15,18 @@ export default new Vuex.Store({
       // console.log(`Updated current playbook to ${JSON.stringify(input)}`);
     },
     updatePlaybookProperty(state, payload) {
+      console.log(payload.target);
       if (dotProp.has(state.currentPlaybook, payload.target)) {
-        dotProp.set(state.currentPlaybook, payload.target, payload.value);
+        const updatedPlaybook = state.currentPlaybook;
+        (dotProp.set(updatedPlaybook, payload.target, payload.value));
+        state.currentPlaybook = updatedPlaybook;
         console.log(`Updated playbook data at ${payload.target} to ${dotProp.get(state.currentPlaybook, payload.target)}`);
+        console.log(state.currentPlaybook);
       }
     },
+    // updatedCheckboxSelected(state, payload) {
+
+    // }
   },
   actions: {},
 });

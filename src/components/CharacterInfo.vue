@@ -53,6 +53,18 @@
               :key="alignments[index][2]"
             ></checkbox-info></b-list-group></b-col
       ></b-row>
+      <b-row> <b-col class="body">Backgrounds</b-col></b-row>
+      <b-row
+        ><b-col class="body">
+          <b-list-group>
+            <checkbox-info
+              class="checkbox-info"
+              v-for="(background, index) in backgrounds"
+              :playbookPath="'backgrounds'"
+              :index="index"
+              :key="backgrounds[index][2]"
+            ></checkbox-info></b-list-group></b-col
+      ></b-row>
     </b-col>
   </b-container>
 </template>
@@ -74,6 +86,13 @@
 input,
 textarea {
   border: #081429;
+  background-color: rgb(68, 68, 68);
+  color: rgb(204, 200, 200);
+  box-shadow: none;
+}
+
+input:focus,
+textarea:focus {
   background-color: rgb(68, 68, 68);
   color: rgb(204, 200, 200);
 }
@@ -147,6 +166,9 @@ export default {
     },
     alignments() {
       return this.playbook.alignments;
+    },
+    backgrounds() {
+      return this.playbook.backgrounds;
     },
   },
 };

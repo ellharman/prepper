@@ -2,8 +2,10 @@
   <b-list-group-item
     :active="active"
     button
+    square
     @click="setSelected"
     :key="index"
+    class="btn"
     active-class="active"
   >
     <b-row align-v="center">
@@ -14,6 +16,7 @@
 </template>
 
 <style lang="scss" scoped>
+
 .list-group-item {
   color: inherit;
   padding: 0.5em;

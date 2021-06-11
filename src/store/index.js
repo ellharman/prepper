@@ -15,7 +15,6 @@ export default new Vuex.Store({
       // console.log(`Updated current playbook to ${JSON.stringify(input)}`);
     },
     updatePlaybookProperty(state, payload) {
-      console.log(payload.target);
       if (dotProp.has(state.currentPlaybook, payload.target)) {
         const updatedPlaybook = state.currentPlaybook;
         (dotProp.set(updatedPlaybook, payload.target, payload.value));

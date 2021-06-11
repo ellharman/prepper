@@ -74,6 +74,23 @@
         ></b-row>
       </div>
       <hr class="rule" />
+      <div class="subcontainer">
+        <b-row> <b-col class="body">Races</b-col></b-row>
+        <b-row
+          ><b-col class="body">
+            <b-list-group>
+              <checkbox-info
+                class="checkbox-info"
+                v-for="(race, index) in races"
+                :playbookPath="'races'"
+                :index="index"
+                :noBodyText="true"
+                :key="races[index][1]"
+                :hasCustom="true"
+              ></checkbox-info></b-list-group></b-col
+        ></b-row>
+      </div>
+      <hr class="rule" />
     </b-col>
   </b-container>
 </template>
@@ -132,6 +149,10 @@ input {
   background-color: rgb(68, 68, 68);
   color: rgb(204, 200, 200);
   box-shadow: none;
+}
+
+.checkbox-info {
+  padding: 0.2em;
 }
 
 textarea {
@@ -226,6 +247,9 @@ export default {
     },
     backgrounds() {
       return this.playbook.backgrounds;
+    },
+    races() {
+      return this.playbook.races;
     },
   },
 };

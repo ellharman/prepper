@@ -31,7 +31,7 @@
         <b-col class="body">Look:</b-col>
         <b-col class="body"
           ><b-form-textarea
-          id="look-textarea"
+            id="look-textarea"
             v-model="look"
             :placeholder="exampleLooks"
             type="text"
@@ -127,8 +127,15 @@
   padding-bottom: 0.2em;
 }
 
-input,
+input {
+  border: #081429;
+  background-color: rgb(68, 68, 68);
+  color: rgb(204, 200, 200);
+  box-shadow: none;
+}
+
 textarea {
+  height: 8em;
   border: #081429;
   background-color: rgb(68, 68, 68);
   color: rgb(204, 200, 200);

@@ -4,7 +4,7 @@
       <b-row align-h="center" class="header">
         {{ playbook.className }}
       </b-row>
-            <hr class="rule" id="initial-rule" />
+      <hr class="rule" id="initial-rule" />
       <b-row align-v="center">
         <b-col class="body">
           <div class="text-center">
@@ -23,7 +23,7 @@
           <b-form-input
             v-model="pronouns"
             type="text"
-            placeholder="they/them, she/her, xe/xir, he/him, other!"
+            placeholder="they/them, she/her, xe/xir, he/him"
           />
         </b-col>
       </b-row>
@@ -31,6 +31,7 @@
         <b-col class="body">Look:</b-col>
         <b-col class="body"
           ><b-form-textarea
+          id="look-textarea"
             v-model="look"
             :placeholder="exampleLooks"
             type="text"
@@ -72,13 +73,12 @@
               ></checkbox-info></b-list-group></b-col
         ></b-row>
       </div>
-            <hr class="rule" />
+      <hr class="rule" />
     </b-col>
   </b-container>
 </template>
 
 <style lang="scss" scoped>
-
 .rule {
   border-color: #1cb84393;
 }
@@ -150,6 +150,12 @@ textarea:focus {
 ::-webkit-input-placeholder {
   font-size: 0.85em !important;
   color: rgb(204, 200, 200);
+}
+
+#look-textarea::-webkit-input-placeholder {
+  font-size: 0.85em !important;
+  color: rgb(204, 200, 200);
+  white-space: pre-line;
 }
 </style>
 

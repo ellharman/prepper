@@ -31,10 +31,10 @@
 
   a {
     font-weight: bold;
-    color: rgb(252, 214, 0);
+    color: #f5c884;
 
     &.router-link-exact-active {
-      color: rgb(212, 95, 223);
+      color: #1cb843;
     }
   }
 }

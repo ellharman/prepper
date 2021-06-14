@@ -48,20 +48,32 @@
     "recommended": ["wisdom", "strength"]
   },
   "alignments": [
-    [false, "good", "Feed those in need"],
-    [false, "neutral", "Feed the powerful"],
+    [false, "Good", "Feed those in need"],
+    [false, "Neutral", "Feed the powerful"],
     [
       false,
-      "chaotic",
+      "Chaotic",
       "Feed somebody (including yourself) something as an experiment"
     ]
   ],
   "bonds": [
-    ["", "$NAME never leaves time for the good things in life. I will show them what they’re missing."],
-    ["", "$NAME is unsure about my methods. I’ll show them why I do things my way."],
-    ["", "$NAME loves my cooking! I will make them the best thing they ever tasted."],
+    [
+      "",
+      "$NAME never leaves time for the good things in life. I will show them what they’re missing."
+    ],
+    [
+      "",
+      "$NAME is unsure about my methods. I’ll show them why I do things my way."
+    ],
+    [
+      "",
+      "$NAME loves my cooking! I will make them the best thing they ever tasted."
+    ],
     ["", "$NAME comes to me for advice sometimes. I help where I can."],
-    ["", "I have a lot to learn from $NAME, whether they care to teach me is another matter."],
+    [
+      "",
+      "I have a lot to learn from $NAME, whether they care to teach me is another matter."
+    ],
     ["", ""]
   ],
   "backgrounds": [
@@ -102,7 +114,7 @@
     [false, "Magical Construct"],
     [false, "Talking Rat"],
     [false, "Undead"],
-    [false, ""]
+    [false, "", "custom" ]
   ],
   "deathMove": "As part of your normal Last Breath roll: When you die, you may have one last meal with Death. Should death appreciate your hospitality and see fit to return you, you will find on you a token of Death’s favor.",
   "currency": ["Gold", 0],

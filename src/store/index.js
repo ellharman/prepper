@@ -16,10 +16,18 @@ export default new Vuex.Store({
     },
     updatePlaybookProperty(state, payload) {
       if (dotProp.has(state.currentPlaybook, payload.target)) {
-        dotProp.set(state.currentPlaybook, payload.target, payload.value);
+        const updatedPlaybook = state.currentPlaybook;
+        (dotProp.set(updatedPlaybook, payload.target, payload.value));
+        state.currentPlaybook = updatedPlaybook;
         console.log(`Updated playbook data at ${payload.target} to ${dotProp.get(state.currentPlaybook, payload.target)}`);
+        console.log(state.currentPlaybook);
+      } else {
+        throw Error('The currently loaded playbook does not have that property');
       }
     },
+    // updatedCheckboxSelected(state, payload) {
+
+    // }
   },
   actions: {},
 });

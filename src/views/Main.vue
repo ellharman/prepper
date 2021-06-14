@@ -8,7 +8,9 @@
         <b-col>
           <character-info />
         </b-col>
-        <b-col> </b-col>
+        <b-col>
+          <stat-info />
+        </b-col>
         <b-col> moves </b-col>
       </b-row>
     </b-container>
@@ -59,6 +61,7 @@
 
 <script>
 import CharacterInfo from '@/components/CharacterInfo.vue';
+import StatInfo from '@/components/StatInfo.vue';
 
 export default {
   data() {
@@ -68,6 +71,7 @@ export default {
   },
   components: {
     CharacterInfo,
+    StatInfo,
   },
   methods: {
     hoverHandler(isHovered) {

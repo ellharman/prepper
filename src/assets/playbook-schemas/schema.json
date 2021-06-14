@@ -35,7 +35,7 @@
     "stats": {
       "type": "object",
       "properties": {
-        "damageStats": {
+        "vitals": {
           "type": "object",
           "properties": {
             "armor": {
@@ -161,7 +161,7 @@
         }
       },
       "required": [
-        "damageStats",
+        "vitals",
         "expStats",
         "statBlock",
         "toAssign",

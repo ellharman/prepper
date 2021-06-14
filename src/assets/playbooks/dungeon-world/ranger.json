@@ -9,9 +9,9 @@
     "look": ""
   },
   "stats": {
-    "damageStats": {
+    "vitals": {
       "armor": 0,
-      "damage": 0,
+      "damage": "D8",
       "hitPoints": 0,
       "hitPointsBase": 8,
       "hitPointsMod": "constitution"

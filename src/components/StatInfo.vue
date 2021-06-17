@@ -3,6 +3,7 @@
     <b-row align-h="center" class="header"> Stats </b-row>
     <hr class="rule" id="initial-rule" />
     <vitals-block />
+    <hr class="rule" />
   </b-container>
 </template>
 

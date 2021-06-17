@@ -11,9 +11,10 @@
   },
   "stats": {
     "vitals": {
-      "armor": 420,
+      "armor": 0,
       "damage": "D8",
-      "hitPoints": 0,
+      "hitPointsCurrent": 0,
+      "hitPointsMax": 0,
       "hitPointsBase": 8,
       "hitPointsMod": "Constitution"
     },

@@ -123,7 +123,6 @@ export default {
       return false;
     },
     hasCustom() {
-      console.log(this.$store.state.currentPlaybook[this.playbookPath][this.index][2]);
       if (this.$store.state.currentPlaybook[this.playbookPath][this.index][2] === 'custom') {
         return true;
       }
@@ -134,7 +133,6 @@ export default {
         return this.$store.state.currentPlaybook[this.playbookPath][this.index][1];
       },
       set(value) {
-        console.log(`customInput is setting ${value}`);
         const payload = {
           value,
           target: `${this.playbookPath}.${this.index}.1`,
@@ -146,12 +144,9 @@ export default {
   },
   methods: {
     selected() {
-      console.log('Re-rendering selected');
-      console.log(this.$store.state.currentPlaybook[this.playbookPath][this.index][0]);
       return this.$store.state.currentPlaybook[this.playbookPath][this.index][0];
     },
     setSelected() {
-      console.log('button clicked');
       if (!this.hasCustom) {
         if (this.active === true) {
           this.active = false;

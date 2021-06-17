@@ -1,13 +1,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import dotProp from 'dot-prop';
+import playbookData from '../assets/playbooks/index';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   strict: true,
   state: {
-    currentPlaybook: null,
+    currentPlaybook: playbookData.defaultClass,
   },
   mutations: {
     updateCurrentPlaybook(state, input) {

@@ -28,8 +28,7 @@ Other
 - Could have a dice utility
 
 ## Packages to use?
-- rpg-awesome CSS font
-- vuex-persistedstate
+- vue-dragula for moves section
 
 ## Project setup
 ```

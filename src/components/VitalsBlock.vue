@@ -1,11 +1,15 @@
 <template>
   <b-container>
-    <b-row>
-      <b-col>Armor</b-col>
-      <b-col><b-form-input v-model="armor" type="number"></b-form-input></b-col>
-      <b-col>Armor</b-col>
-      <!-- <b-col><b-form-input v-model="vitals.armor"></b-form-input></b-col> -->
-    </b-row>
+    <b-col>
+      <b-row>
+        <b-col>Armor</b-col>
+        <b-col
+          ><b-form-input v-model="armor" type="number"></b-form-input
+        ></b-col>
+        <b-col>Armor</b-col>
+        <!-- <b-col><b-form-input v-model="vitals.armor"></b-form-input></b-col> -->
+      </b-row>
+    </b-col>
   </b-container>
 </template>
 
